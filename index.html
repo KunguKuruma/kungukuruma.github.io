@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeffry Kungu Kuruma — Applied Deep Learning Researcher</title>
+<meta name="description" content="Expression of interest in a PhD with the Medical Image Analysis Lab, Simon Fraser University. Applied deep learning researcher: brain tumour MRI classification, failure analysis, explainable and deployable diagnostics.">
+<meta name="author" content="Jeffry Kungu Kuruma">
+<meta name="theme-color" content="#fbfaf7">
+<!-- Social preview tags. These assume the repo is named kungukuruma.github.io; if you use another repo name, add it after the domain in og:url and both image URLs. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jeffry Kungu Kuruma — Applied Deep Learning Researcher">
+<meta property="og:description" content="Expression of interest in a PhD with the Medical Image Analysis Lab, SFU: brain tumour MRI classification, per-class failure analysis, and explainable, deployable diagnostics.">
+<meta property="og:url" content="https://kungukuruma.github.io/">
+<meta property="og:image" content="https://kungukuruma.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jeffry Kungu Kuruma, applied deep learning researcher in medical imaging AI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jeffry Kungu Kuruma — Applied Deep Learning Researcher">
+<meta name="twitter:description" content="Expression of interest in a PhD with the Medical Image Analysis Lab, SFU: brain tumour MRI classification, per-class failure analysis, and explainable, deployable diagnostics.">
+<meta name="twitter:image" content="https://kungukuruma.github.io/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf7;
+    --ink:#1c1b1a;
+    --dim:#57534e;
+    --faint:#6f6a63;
+    --rule:#e4e0d8;
+    --accent:#0f5c55;
+    --warn:#b4531f;
+    --serif:'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --mono:'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141311; --ink:#ece9e2; --dim:#b5b0a6; --faint:#948f85;
+      --rule:#2c2a26; --accent:#5fc4b8; --warn:#e58a55;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:var(--serif);font-size:18px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:720px;margin:0 auto;padding:56px 16px 80px}
+  @media(min-width:640px){.page{padding:72px 24px 96px}}
+
+  a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  /* header */
+  .status{font-family:var(--mono);font-size:13px;color:var(--faint);letter-spacing:.2px;margin-bottom:14px}
+  h1{font-size:clamp(34px,7vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.8px;margin-bottom:16px}
+  .position{font-size:20px;line-height:1.5;color:var(--dim);max-width:34em}
+  .links{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:22px;font-size:16px}
+  nav{margin-top:36px;padding-top:14px;border-top:1px solid var(--rule);
+      display:flex;flex-wrap:wrap;gap:4px 20px;font-family:var(--mono);font-size:13px}
+  nav a{color:var(--faint);text-decoration:none}
+  nav a:hover{color:var(--accent);text-decoration:underline}
+
+  /* sections */
+  section{margin-top:64px}
+  h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;
+     color:var(--faint);padding-bottom:10px;border-bottom:1px solid var(--rule);margin-bottom:26px}
+  h3{font-size:19px;line-height:1.35;font-weight:600}
+  p + p{margin-top:1em}
+  .meta{font-family:var(--mono);font-size:13px;color:var(--faint);margin-top:4px}
+  .item + .item{margin-top:32px}
+  .item p{color:var(--dim);margin-top:8px}
+  .item ul{margin-top:10px;padding-left:1.2em;color:var(--dim)}
+  .item li + li{margin-top:6px}
+  .item li::marker{color:var(--faint)}
+  b,strong{color:var(--ink);font-weight:600}
+  .tag{
+    display:inline-block;font-family:var(--mono);font-size:11.5px;letter-spacing:.6px;text-transform:uppercase;
+    color:var(--faint);border:1px solid var(--rule);border-radius:4px;padding:1px 7px;margin-bottom:8px;
+  }
+  .tag.review{color:var(--warn);border-color:var(--warn)}
+  section > ul.strands{margin:14px 0 14px;padding-left:1.2em;color:var(--dim)}
+  ul.strands li + li{margin-top:10px}
+  ul.strands li::marker{color:var(--faint)}
+  section > p{color:var(--dim)}
+
+  /* results */
+  .figures{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 24px;margin:6px 0 30px}
+  @media(min-width:640px){.figures{grid-template-columns:repeat(4,1fr)}}
+  .fig .n{font-family:var(--mono);font-size:28px;font-weight:600;line-height:1.1}
+  .fig .l{font-size:14px;color:var(--faint);margin-top:4px;line-height:1.35}
+  figure{margin:8px 0 0}
+  .bars{display:grid;gap:14px}
+  .bar-row{display:grid;grid-template-columns:96px 1fr 48px;align-items:center;gap:12px;font-size:15px}
+  @media(max-width:480px){.bar-row{grid-template-columns:72px 1fr 44px;font-size:14px}}
+  .track{height:14px;background:var(--rule);border-radius:2px;overflow:hidden}
+  .fill{height:100%;background:var(--accent)}
+  .fill.weak{background:var(--warn)}
+  .val{font-family:var(--mono);font-size:14px;text-align:right}
+  figcaption{font-size:14px;color:var(--faint);margin-top:14px;line-height:1.5}
+
+  dl.skills{display:grid;grid-template-columns:1fr;gap:12px}
+  dl.skills dt{font-family:var(--mono);font-size:12.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--faint)}
+  dl.skills dd{color:var(--dim);margin-top:2px}
+  @media(min-width:640px){
+    dl.skills{grid-template-columns:190px 1fr;gap:14px 24px}
+    dl.skills dd{margin-top:0}
+    dl.skills dt{padding-top:5px}
+  }
+
+  .item.minor h3{font-weight:500;font-size:17px;color:var(--dim)}
+  .item.minor p{font-size:16px}
+
+  footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--rule)}
+  footer p{color:var(--dim)}
+  .contacts{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:14px;font-size:17px}
+
+  @media print{
+    :root{--bg:#fff;--ink:#000;--dim:#222;--faint:#444;--rule:#bbb;--accent:#000;--warn:#000}
+    body{font-size:11pt;line-height:1.45}
+    .page{max-width:none;padding:0}
+    nav{display:none}
+    section{margin-top:22pt;break-inside:auto}
+    .item,figure,.figures{break-inside:avoid}
+    a{text-decoration:none;color:#000}
+    a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;color:#444}
+    .fill{background:#000!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .fill.weak{background:#777!important}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <p class="status">Expression of interest in PhD · Medical Image Analysis Lab, Simon Fraser University</p>
+  <h1>Jeffry Kungu Kuruma</h1>
+  <p class="position">
+    Applied deep learning researcher working on diagnostic imaging models that are judged by where they fail,
+    not only by how well they score.
+  </p>
+  <div class="links">
+    <a href="mailto:kungukuruma@gmail.com">kungukuruma@gmail.com</a>
+    <a href="https://www.linkedin.com/in/jeffrykuruma" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://esource.dbs.ie/items/8c5b31fe-d9cf-4f05-86e4-d0a3dc61858d/full" target="_blank" rel="noopener">MSc thesis (DBS eSource)</a>
+  </div>
+  <nav aria-label="Sections">
+    <a href="#profile">Profile</a>
+    <a href="#direction">Direction and fit</a>
+    <a href="#results">Results</a>
+    <a href="#publications">Publications</a>
+    <a href="#research">Research</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="profile">
+  <h2>Profile</h2>
+  <p>
+    I hold an MSc in Data Analytics from Dublin Business School and have worked with data across research,
+    finance and operations. My dissertation benchmarked seven models for brain tumour classification from MRI
+    and found that their errors were not spread evenly: glioma was the weakest class in every model,
+    whatever the architecture. That finding is the subject of a journal article now under peer review, and it
+    changed how I judge medical imaging models, by where and why they fail as much as by their headline scores.
+  </p>
+  <p>
+    Before this, at KALRO in Kenya, I supported KilimoSTAT, an agricultural data platform, integrating data from
+    several institutions and preparing it for machine learning. That work gave me early experience of building
+    data pipelines for applied AI outside a clean benchmark setting.
+  </p>
+</section>
+
+<section id="direction">
+  <h2>Research direction and fit with the MIA Lab</h2>
+  <p>
+    Diagnostic imaging models are usually reported with a single aggregate score, and that score hides a lot.
+    In my MSc work, an InceptionV3 model with 86% accuracy recalled only 53% of gliomas, and the same class
+    was the weakest in all seven models. A system that misses nearly half the cases of one tumour type is not
+    clinically usable, however good its average. My thesis first framed this for Kenya's healthcare system,
+    where diagnostic delays for brain tumours are a serious problem.
+  </p>
+  <p>
+    I want to work on making diagnostic models dependable outside the setting they were built in. Three lines
+    of work connect my background to research in Dr. Ghassan Hamarneh's Medical Image Analysis Lab at Simon
+    Fraser University:
+  </p>
+  <ul class="strands">
+    <li><b>Explainability that clinicians can use.</b> Explanations only matter if they help a clinician decide.
+      I want to generate and evaluate explanations for multimodal medical image models, which relates to the lab's
+      work on post-hoc explanation and on the clinical utility of AI assistance and its explanation. My lung cancer
+      proposal, which pairs CT imaging with clinical variables and builds explanation into the design, is a
+      starting point.</li>
+    <li><b>Why errors concentrate, and knowing when a model is wrong.</b> My MSc work showed errors gathering in
+      one class at the glioma and meningioma boundary. I want to ask whether such failures come from visual
+      overlap, annotation noise and disagreement, or model limits, and to build models that flag the cases
+      they are likely to get wrong. The lab's work on annotation noise and dataset quality in dermatology is a
+      natural place to study this.</li>
+    <li><b>Generalisation and fairness across sites and groups.</b> Test whether performance holds across
+      scanners, institutions and patient populations, and whether it holds fairly, which connects to the lab's
+      work on generalisable continual classification and on mitigating bias in medical image analysis.</li>
+  </ul>
+  <p>
+    I would like to pursue these questions as a PhD student in Dr. Hamarneh's lab, with the aim of detection that
+    changes clinical outcomes, not only benchmark rankings.
+  </p>
+</section>
+
+<section id="results">
+  <h2>Selected results</h2>
+  <p style="margin-bottom:24px">
+    My MSc dissertation benchmarked seven models (three classical, four deep learning) on a public Kaggle
+    dataset of 3,264 brain MRI images across four classes: glioma, meningioma, pituitary and no tumour.
+    The best model was InceptionV3. The headline numbers are decent; the weakest class is the more useful finding.
+  </p>
+
+  <div class="figures">
+    <div class="fig"><div class="n">86%</div><div class="l">Accuracy, InceptionV3</div></div>
+    <div class="fig"><div class="n">89%</div><div class="l">Precision (weighted)</div></div>
+    <div class="fig"><div class="n">86%</div><div class="l">Recall (weighted)</div></div>
+    <div class="fig"><div class="n">85%</div><div class="l">F1-score (weighted)</div></div>
+  </div>
+
+  <figure>
+    <div class="bars" role="img" aria-label="Bar chart of InceptionV3 recall by class on the test set: glioma 53 percent, pituitary 88 percent, meningioma 100 percent, no tumour 100 percent.">
+      <div class="bar-row"><span>Glioma</span><div class="track"><div class="fill weak" style="width:53%"></div></div><span class="val">53%</span></div>
+      <div class="bar-row"><span>Pituitary</span><div class="track"><div class="fill" style="width:88%"></div></div><span class="val">88%</span></div>
+      <div class="bar-row"><span>Meningioma</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">100%</span></div>
+      <div class="bar-row"><span>No tumour</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">100%</span></div>
+    </div>
+    <figcaption>
+      Figure 1. InceptionV3 recall by class on the held-out test set (100 glioma, 115 meningioma, 74 pituitary,
+      105 no-tumour images). Glioma was the least-recalled class in all seven models (18% to 53%), even though
+      its training set was as large as the other tumour classes, so class size does not explain it. Of the 47
+      gliomas InceptionV3 missed, 29 were labelled meningioma and 18 no tumour. This pattern is the subject of my
+      journal article under review, and motivates uncertainty estimation as future work.
+    </figcaption>
+  </figure>
+</section>
+
+<section id="publications">
+  <h2>Publications and theses</h2>
+
+  <div class="item">
+    <span class="tag review">Under peer review</span>
+    <h3>Systematic and Architecture-Independent Misclassification in a Four-Class Brain Tumour MRI Classification Task: A Controlled Cross-Paradigm Benchmark</h3>
+    <p>Submitted to the DBS Applied Research and Theory Journal. Cleared desktop review; currently in peer review.</p>
+  </div>
+
+  <div class="item">
+    <span class="tag">MSc thesis · 2025 · repository</span>
+    <h3>A Case for Adopting Machine Learning and Deep Learning Technologies in Kenya's Healthcare System for Brain Tumor Detection</h3>
+    <p>
+      Deposited in DBS eSource, the Dublin Business School institutional repository. The title page gives the
+      author name as Kuruma Jeffry Kungu.
+      <a href="https://esource.dbs.ie/items/8c5b31fe-d9cf-4f05-86e4-d0a3dc61858d/full" target="_blank" rel="noopener">View the repository record</a>
+    </p>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research work</h2>
+
+  <div class="item">
+    <h3>Brain tumour classification from MRI using deep learning</h3>
+    <div class="meta">MSc dissertation · 2024–2025 · Dublin Business School</div>
+    <ul>
+      <li>Benchmarked <b>seven models</b>: logistic regression, SVM, decision tree, a custom CNN, and three pretrained transfer learning architectures (VGG19, Xception, InceptionV3).</li>
+      <li>Built a custom CNN from scratch (dropout, global average pooling, ReLU) and compared 60, 80 and 200 epoch runs to characterise overfitting and convergence.</li>
+      <li>Fine-tuned the pretrained networks over 40 epochs with selective layer freezing and unfreezing to adapt them to MRI data.</li>
+      <li>Implemented a preprocessing pipeline with ROI cropping, resizing and augmentation to address class imbalance.</li>
+      <li>Chose <b>recall as the primary clinical metric</b> to limit false negatives, and documented failure modes through confusion matrix analysis.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <span class="tag">Research proposal · 2026 · unpublished</span>
+    <h3>Clinically deployable lung cancer detection system</h3>
+    <div class="meta">Independent research · Irish healthcare context</div>
+    <p>
+      A PhD-level proposal on the gap between high-performing experimental lung cancer models and real clinical deployment.
+    </p>
+    <ul>
+      <li>Proposed an end-to-end system: GDPR-compliant data ingestion, a structured database layer, standardised CT and PET-CT preprocessing, deep learning classification, embedded explainability, and a clinician-facing dashboard.</li>
+      <li>Proposed a <b>multimodal architecture</b> combining CT imaging with structured clinical variables (age, sex, smoking history).</li>
+      <!-- TODO: add the source for the pooled specificity figure (0.68) before publishing. -->
+      <li>From the literature: moderate pooled specificity (0.68) and limited cross-institutional robustness in current systems. Set <b>specificity, false positive reduction and clinical trust</b> as primary evaluation criteria alongside accuracy and AUC.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="item">
+    <h3>MSc in Data Analytics</h3>
+    <div class="meta">Dublin Business School · 2024–2025</div>
+    <p>Machine Learning, Statistics for Data Analytics, Programming for Data Analysis, Data Visualisation, SQL and Data Storage Solutions. Dissertation described above.</p>
+  </div>
+
+  <div class="item">
+    <h3>BSc in Finance</h3>
+    <div class="meta">United States International University – Africa · 2017–2020</div>
+    <p>
+      Dissertation: <i>Demystifying Digital Credit and Its Effects on Kenyan Consumers</i>.
+      A survey-based study of how Kenya's digital credit sector affects consumers:
+      three research questions, a questionnaire instrument, and primary data from 77 respondents collected by snowball sampling.
+      About 52% reported a net positive impact and about 74% of users were aged 18–25. Identified high interest rates and weak
+      regulation as the main risks and drew policy recommendations from them.
+      <a href="bsc-dissertation.pdf" target="_blank" rel="noopener">Read the dissertation (PDF)</a>
+    </p>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Professional experience</h2>
+
+  <div class="item">
+    <h3>Customer Service Advisor</h3>
+    <div class="meta">Bank of Ireland · Dublin · Jul 2026 – Present</div>
+    <ul>
+      <li>Confirm procedures against the internal Knowledge database before escalating, rather than guessing or asking prematurely.</li>
+      <li>Complete identity verification checks before servicing any account query, working precisely within a fixed procedure.</li>
+      <li>Log every customer interaction in real time in Customer Connect, maintaining an accurate, auditable record.</li>
+      <li>Work within full regulatory and operational compliance, with all interactions monitored in real time for risk events.</li>
+      <li>Guide non-technical customers through the bank's digital products and self-service tools across app and web.</li>
+      <li>Work independently in a fully remote setup, managing your own schedule and performance targets.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h3>Workplace Coordinator, Operations &amp; Data Support</h3>
+    <div class="meta">Activision Blizzard King · Dublin · May 2025 – Apr 2026</div>
+    <ul>
+      <li>Designed and maintained BI dashboards tracking space utilisation and occupancy, giving leadership decision-ready visualisations for evidence-based planning.</li>
+      <li>Performed ad-hoc analysis on service metrics and employee feedback, surfacing actionable insights for operational strategy.</li>
+      <li>Produced data-backed reports for senior leadership, translating analytical findings for non-technical audiences.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h3>Junior Research Data Analyst</h3>
+    <div class="meta">Kenya Agricultural &amp; Livestock Research Organisation (KALRO) · Feb 2022 – Apr 2023</div>
+    <ul>
+      <li>Supported <b>KilimoSTAT</b>, an open agricultural data platform, integrating and standardising datasets from multiple government and research institutions.</li>
+      <li>Built data pipelines integrating weather, crop, and satellite datasets; performed SQL transformations for downstream analytics and decision-support models.</li>
+      <li>Supported data preparation for ML models in agricultural decision-support tools (e.g. fertiliser recommendation), giving direct exposure to applied AI in a specialist domain.</li>
+      <li>Trained and supervised data enumerators, improving data-collection accuracy by ~30%.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h3>Financial Assistant</h3>
+    <div class="meta">Kenya Agricultural &amp; Livestock Research Organisation (KALRO) · Oct 2020 – Oct 2021</div>
+    <ul>
+      <li>Prepared and maintained 100+ audit-ready financial records supporting successful internal and external audits.</li>
+      <li>Assisted with budget tracking, reconciliations, and expenditure monitoring across three research projects.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills and certifications</h2>
+  <dl class="skills">
+    <dt>ML and deep learning</dt>
+    <dd>CNNs, transfer learning, fine-tuning, regularisation, hyperparameter optimisation, data augmentation, class imbalance handling, model evaluation</dd>
+    <dt>Programming</dt>
+    <dd>Python, TensorFlow / Keras, scikit-learn, NumPy, Pandas, OpenCV, Matplotlib, Seaborn, Hugging Face, H2O.ai</dd>
+    <dt>Data engineering</dt>
+    <dd>PostgreSQL, MS SQL Server, CTEs, window functions, stored procedures, ETL, indexing, multi-source integration</dd>
+    <dt>Visualisation</dt>
+    <dd>Power BI (DAX, Power Query), Tableau, Matplotlib</dd>
+    <dt>Certifications</dt>
+    <dd>Microsoft Power BI Data Analyst · Intermediate SQL for Data Analytics · IBM Generative AI and Large Language Models</dd>
+  </dl>
+</section>
+
+</main>
+
+<footer id="contact">
+  <p>I look forward to working with the lab.</p>
+</footer>
+
+</div>
+</body>
+</html>
